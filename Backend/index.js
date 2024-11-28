@@ -21,11 +21,9 @@ app.use(
 app.use(express.json());
 
 // Routes
-app.get("/",(req,res)=>{
-  <>
-    Hello
-  </>
-})
+app.get("/", (req, res) => {
+  res.json({ message: "Hello, World!" });
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
